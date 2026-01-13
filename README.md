@@ -1,4 +1,4 @@
-# 🎴 PokeRestock Monitor
+# PokeRestock Monitor
 
 Instant Discord alerts when Pokemon TCG products restock at major retailers.
 
@@ -39,7 +39,7 @@ npm start
 
 ## Privacy: Public Code, Private SKUs
 
-This repo is safe to make public! Your actual SKUs and webhook are stored in:
+This repo is safe to make public. Your actual SKUs and webhook are stored in:
 - **Local**: `.env` file (git-ignored, never uploaded)
 - **Railway**: Environment variables (set in dashboard)
 
@@ -73,7 +73,7 @@ When the products are listed on retailer websites:
 
 ## Deploy to Railway (Free 24/7)
 
-### 1. Push to GitHub (public repo is fine!)
+### 1. Push to GitHub
 ```bash
 git init
 git add .
@@ -88,7 +88,7 @@ git push -u origin main
 3. Click "New Project" → "Deploy from GitHub repo"
 4. Select your PokeRestockMonitor repo
 
-### 3. Add Environment Variables (IMPORTANT!)
+### 3. Add Environment Variables
 1. Click on your deployed service
 2. Go to **Variables** tab
 3. Add these variables:
@@ -99,7 +99,7 @@ git push -u origin main
 | `PRODUCTS` | `[{"name":"Ascended Heroes ETB","walmart":"123","target":"456"}]` |
 | `CHECK_INTERVAL` | `30000` |
 
-### 4. Done!
+### 4. Done
 Railway redeploys automatically with your private config.
 
 ---
@@ -135,7 +135,6 @@ Railway redeploys automatically with your private config.
 1. **Products aren't listed yet?** - Keep the SKUs empty for now, add them when retailers list the products
 2. **Hot drops** - For release day, set `CHECK_INTERVAL=15000` (15 seconds)
 3. **Phone notifications** - Enable Discord notifications for the alert channel
-4. **Act fast** - Giga products sell out in 15-30 seconds!
 
 ---
 
@@ -149,7 +148,3 @@ Set the `PRODUCTS` environment variable with at least one product that has a SKU
 
 ### Monitor not finding products
 Make sure your SKUs are correct - double check the retailer URLs
-
----
-
-Made with ❤️ for Pokemon collectors
