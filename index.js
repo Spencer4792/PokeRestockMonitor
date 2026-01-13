@@ -409,24 +409,6 @@ async function startMonitor() {
     process.exit(1);
   }
   
-  // Send startup notification
-  await fetch(config.discordWebhook, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      embeds: [{
-        title: '🟢 PokeRestock Monitor Started',
-        description: `Now monitoring **${products.length} products** for restocks.`,
-        color: 0x10b981,
-        fields: [
-          { name: 'Check Interval', value: `${config.checkInterval / 1000} seconds`, inline: true },
-          { name: 'Products', value: products.map(p => p.name).join('\n'), inline: false },
-        ],
-        timestamp: new Date().toISOString(),
-      }],
-    }),
-  });
-  
   // Initial check
   await checkAllProducts();
   
