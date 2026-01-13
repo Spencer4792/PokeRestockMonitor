@@ -10,6 +10,10 @@
  *   3. Get Discord alerts when items restock!
  */
 
+// Load environment variables from .env file (for local dev)
+// Railway automatically injects env vars, but this helps locally
+import 'dotenv/config';
+
 import fetch from 'node-fetch';
 import { config, products } from './config.js';
 
