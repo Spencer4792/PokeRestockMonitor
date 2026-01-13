@@ -1,0 +1,7 @@
+node_modules/
+.env
+.DS_Store
+*.log
+
+# Keep .env.example but ignore actual .env
+!.env.example

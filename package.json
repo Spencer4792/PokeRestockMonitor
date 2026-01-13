@@ -1,0 +1,17 @@
+{
+  "name": "poke-restock-monitor",
+  "version": "1.0.0",
+  "description": "Pokemon TCG restock monitor with Discord alerts",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env index.js 2>/dev/null || node index.js",
+    "dev": "node --watch --env-file=.env index.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
